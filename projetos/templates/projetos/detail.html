@@ -1,0 +1,15 @@
+<h1>{{ projeto.titulo }}</h1>
+
+<p>{{ projeto.descricao }}</p>
+
+{% if projeto.imagem %}
+  <img src="{{ projeto.imagem.url }}" width="300">
+{% endif %}
+
+<br><br>
+
+<a href="{{ projeto.link }}">Acessar projeto</a>
+
+<br><br>
+
+<a href="/projetos/">Voltar</a>
