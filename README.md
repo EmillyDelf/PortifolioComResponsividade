@@ -101,14 +101,6 @@ O front-end é responsável por:
 Exibir os dados recebidos do Django
 Aplicar estilos visuais com CSS
 Criar interatividade com JavaScript
-
-Funcionalidades implementadas:
-
-Menu de navegação fixo
-Seção “Sobre mim”
-Carrossel de projetos com botões de navegação
-Modal com detalhes do projeto
-Área de contato
 ---
 
 ## ✅ Status do Projeto
