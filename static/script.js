@@ -1,4 +1,4 @@
-let index = 0;
+ let index = 0;
 const projetos = document.querySelectorAll(".projetos-card");
 
 function mostrarProjeto(i) {
