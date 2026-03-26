@@ -1,0 +1,134 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/worker.jpg' %}">
+</head>
+
+<body>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#projetos" class="menu-link">Projetos</a></li>
+            <li><a href="#contatos" class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="linha1"></div>
+
+    <main id="inicio" class="cabecalho">
+        <div>
+            <img src="{% static 'img/image.png' %}" class="foto-perfil">
+            <h1>John Harrison</h1>
+            <p class="cabecario-subtitulo">Developer</p>
+        </div>
+    </main>
+
+    <div class="linha"></div>
+
+    <section id="sobre" class="sobre">
+        <h1 class="sobre-titulo">Sobre mim</h1>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Meu nome é John Harrison, tenho 20 anos e sou estudante da faculdade UNIFIP...
+            </p>
+        </div>
+    </section>
+
+    <div class="linha"></div>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+
+<div class="projetos-caixa">
+
+    <button onclick="anterior()">←</button>
+
+    {% for projeto in projetos %}
+    <div class="projetos-card {% if forloop.first %}ativo{% endif %}"
+        onclick="abrirModal('{{ projeto.titulo }}', '{{ projeto.descricao }}')">
+
+        {% if projeto.imagem %}
+            <img src="{{ projeto.imagem.url }}" class="projetos-imagem">
+        {% endif %}
+
+        <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">{{ projeto.titulo }}</h3>
+            <p class="paragrafo-projetos">{{ projeto.descricao }}</p>
+        </div>
+    </div>
+    {% endfor %}
+
+    <button onclick="proximo()">→</button>
+
+</div>
+
+
+    </section>
+
+    <div class="linha"></div>
+
+    <!-- CONTATO -->
+    <section id="contatos" class="contatos">
+        <div class="container1">
+            <h2 class="contatos-titulo">Entre em contato!</h2>
+        </div>
+
+        <div class="container2">
+            <ul class="contatos-lista">
+                <li>
+                    <img src="{% static 'img/mail.png' %}" id="imgemail">
+                    johnuchoa@ads.fiponline.edu.br
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/">
+                        <img src="{% static 'img/linkedin.png' %}">
+                        <p>Linkedin</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="{% static 'img/rounded.png' %}" id="imggithub">
+                        <p>github.com/JohnHarrison-br</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="caixa2">
+                <p class="caixa2-paragrafo">
+                    Estou à disposição para trocar ideias e projetos!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="linha"></div>
+
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal()">×</span>
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-descricao"></p>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <h3>Equipe Web I</h3>
+        <p>2026 por Equipe Web I.</p>
+        <p>Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+
+</body>
+</html>
