@@ -23,7 +23,7 @@ O sistema foi desenvolvido como parte de uma atividade acadêmica, com foco em b
 ## 🛠️ Tecnologias Utilizadas
 
 * Python
-* Django
+* Django framework
 * PostgreSQL
 * HTML
 * CSS
@@ -105,13 +105,13 @@ Criar interatividade com JavaScript
 
 ## ✅ Status do Projeto
 
-Em desenvolvimento
+Concluído.
 
 ---
 
 ## 📌 Observações
 
-Este projeto foi desenvolvido com foco em simplicidade, organização e aplicação prática dos conceitos de desenvolvimento web com Django.
+Este projeto foi desenvolvido com foco em funcionalidade, organização e aplicação prática dos conceitos de desenvolvimento web com Django.
 
 ---
 
